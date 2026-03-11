@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+.env
+
+# Model files
+*.pt
+*.pth
+*.bin
+*.safetensors
+
+# Training checkpoints
+checkpoint*/
+deberta_textbook_model/
+
+# Logs
+logs/
