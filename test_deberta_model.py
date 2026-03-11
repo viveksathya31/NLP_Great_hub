@@ -30,5 +30,6 @@ top_tokens = torch.topk(mask_logits, 10, dim=1).indices[0].tolist()
 print("\nTop predictions:")
 
 for token_id in top_tokens:
-    word = tokenizer.convert_ids_to_tokens(token_id)
+    # Decode handles the SentencePiece special characters cleanly
+    word = tokenizer.decode([token_id]).strip()
     print(word)
